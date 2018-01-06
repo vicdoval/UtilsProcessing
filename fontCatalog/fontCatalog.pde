@@ -3,7 +3,7 @@ Font Catalog Generator by Victor Doval
 This sketch generates a serie of images with all the fonts avalaible in the computer to facilitate the selection.
 to call back to the same font  you should use 
 
-font=createFont(PFont.list()[FontNumber], 120);
+font = createFont(PFont.list()[FontNumber], 120);
 Note that every time you install a font "FontNumber" could change.
 Another way is just coping the name.
 font=createFont("Arial", 120);
