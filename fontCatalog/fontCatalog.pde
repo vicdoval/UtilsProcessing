@@ -15,40 +15,40 @@ Pusblished at https://github.com/vicdoval/UtilsProcessing
  back to you and don't hold you liable)  
  */
  
-String[] a=PFont.list();
+String[] a = PFont.list();
 println(a.length);
 size(1280, 720);
 background(0);
-int fc=0;
-int off=0;
+int fc = 0;
+int off = 0;
 
-float x=25;
-float y=25;
-PFont base= createFont("Lucida Sans", 8);
-for (int i=0; i<a.length; i++) {
-  PFont f= createFont(a[i], 20);
+float x = 25;
+float y = 25;
+PFont base = createFont("Lucida Sans", 8);
+for (int i = 0; i<a.length; i++) {
+  PFont f = createFont(a[i], 20);
   textFont(f);
   float d=textWidth(a[i]);
  
   text(a[i], x, y);
   float alt=textAscent();
   textFont(base);
-  text(i+" "+a[i], x, y+alt);
-  x+=d+20;
-  if (x>width-50) {
+  text(i + " " + a[i], x, y + alt);
+  x += d + 20;
+  if (x > width-50) {
 
-    x=25;
+    x = 25;
     y+=40;
    
-    off+=width;
+    off += width;
   }
-  if (y>height-50) {
-    saveFrame(fc+".jpg");
+  if (y > height-50) {
+    saveFrame(fc + ".jpg");
     fc++;
     background(0);
-    x=25;
-    y=25;
+    x = 25;
+    y = 25;
   }
   println(i, fc, x, y);
 }
-saveFrame(fc+".jpg");
+saveFrame(fc + ".jpg");
